@@ -413,9 +413,27 @@ public class Array1 {
 	//	make2([4, 5], [1, 2, 3]) → [4, 5]
 	//	make2([4], [1, 2, 3]) → [4, 1]
 	//	make2([], [1, 2]) → [1, 2]
-//	public int[] make2(int[] a, int[] b) {
+	public int[] make2(int[] a, int[] b) {
+		int[] arr = new int[2];
+		int count = 0;
+		int i;
 
-//	}
+		i = 0;
+		while(count < 2 && i < a.length) {
+			arr[count] = a[i];
+			count++;
+			i++;
+		}
+
+		i = 0;
+		while(count < 2 && i < b.length) {
+			arr[count] = b[i];
+			count++;
+			i++;
+		}
+
+		return arr;
+	}
 
 	//	Given 2 int arrays, a and b, of any length, return a new array with the first element
 	//	of each array. If either array is length 0, ignore that array.
